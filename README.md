@@ -47,3 +47,7 @@ Finally, run this plugin
 ```
 
 That's it!
+
+Jeffijoe Fork:
+
+I've made this amazing thing responsive, so it works with jQuery mobile.
