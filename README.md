@@ -33,7 +33,7 @@ First include the latest version of jQuery. Next, download and include jquery-te
 <link type="text/css" rel="stylesheet" href="jquery-te-Style.css" charset="utf-8" />
 ```
 
-After than, create a textarea inside to body tags
+After that, create a textarea inside to body tags
 
 ``` html
 <textarea></textarea>
@@ -52,3 +52,35 @@ Jeffijoe Fork:
 -----
 
 I've made this amazing thing responsive, so it works with jQuery mobile.
+
+Added Image support as well - how to use:
+
+``` javascript
+
+	var config = {
+	    onClick: function(){
+                var src = "http://some.com/image.png";
+		config.insertImage(src);
+	    }
+	}
+	$("textarea").jqte().jqte_image(config);
+
+```
+
+The great thing about this setup, is that you decide WHEN to insert the image.
+
+E.g:
+
+``` javascript
+
+    var config = {
+        onClick: function () {
+            $.get("imagerequest", function(result) {
+                // The server has returned a string - our image!
+                config.insertImage(result);
+            });
+        }
+    }
+
+```
+This allows asynchronous logic.
