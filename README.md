@@ -75,7 +75,7 @@ E.g:
 
     var config = {
         onClick: function () {
-            $.get("imagerequest", function(result) {
+            $.get("imagerequest.php", function(result) {
                 // The server has returned a string - our image!
                 config.insertImage(result);
             });
